@@ -2,6 +2,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{cleveref}
 \usepackage[hypcap]{caption}
 \title{Evenly Distributing Bisected Pizza Slices}
 \author{Paul Foster}
@@ -21,34 +22,36 @@ $N>1$ people are sitting at a table and wish to divide a pizza evenly amoungst t
 
 \section{Analysis}
 After $j$ bisections, there will be $2^j$ slices. So we wish to solve the following: given $N>1 \in \mathbb{N}$, find the smallest $j \in \mathbb{N}$ (if it exists) such that $\exists k \in \mathbb{N}$ such that
-\begin{equation} \label{eq:solve}
+\begin{equation} \label{eq:1}
   kN = 2^j
 \end{equation}
 where $N$ is the number of people, $j$ is the number of bisections and $k$ is the number of slices per person.
 
-\begin{lemma}
+\begin{lemma} \label{lem:1}
 Let $p$ be prime and $n \in \mathbb{Z}$.
 \begin{equation}
   q | p^n \implies \exists m \in \mathbb{Z}~\text{s.t}~q = p^m
 \end{equation}
 \end{lemma}
 
+\begin{proof}
+\end{proof}
+
 \begin{theorem}
-$N$ has a solution to~\eqref{eq:solve} iff $\exists l \in \mathbb{N}$ such that $N = 2^l$.
+$N$ has a solution to~\Cref{eq:1} iff $\exists l \in \mathbb{N}$ such that $N = 2^l$.
 \end{theorem}
 
 \begin{proof}
-For the forward direction, assume $kN=2^j$
+For the forward direction, assume $kN=2^j$. As $2$ is prime and $N$ divides $2^j$, ~\Cref{lem:1} implies $N=2^l$.
+
+For the reverse direction, assume $N=2^l$. Choose $k=1$ and $j=l$ and we have $kN=2^j$.
 \end{proof}
 
-
 \begin{corollary}
-If $N$ has a solution to~\eqref{eq:solve}, $j$ is minimised when $j$ = $\log_2 N$
+If $N$ has a solution to~\Cref{eq:1}, $j$ is minimised when $j$ = $\log_2 N$
 \end{corollary}
 
 \begin{proof}
-To prove it by contradiction try and assume that the statemenet is false,
-proceed from there and at some point you will arrive to a contradiction.
 \end{proof}
 
 \end{document}
