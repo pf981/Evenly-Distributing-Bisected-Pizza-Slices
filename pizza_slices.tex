@@ -26,13 +26,19 @@ After $j$ bisections, there will be $2^j$ slices. So we wish to solve the follow
 \end{equation}
 where $N$ is the number of people, $j$ is the number of bisections and $k$ is the number of slices per person.
 
+\begin{lemma}
+Let $p$ be prime and $n \in \mathbb{Z}$.
+\begin{equation}
+  q | p^n \implies \exists m \in \mathbb{Z}~\text{s.t}~q = p^m
+\end{equation}
+\end{lemma}
+
 \begin{theorem}
 $N$ has a solution to~\eqref{eq:solve} iff $\exists l \in \mathbb{N}$ such that $N = 2^l$.
 \end{theorem}
 
 \begin{proof}
-To prove it by contradiction try and assume that the statemenet is false,
-proceed from there and at some point you will arrive to a contradiction.
+For the forward direction, assume $kN=2^j$
 \end{proof}
 
 
