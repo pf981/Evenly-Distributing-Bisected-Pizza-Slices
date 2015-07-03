@@ -3,6 +3,8 @@ all: report.pdf purge
 # This strange order of latex, bitex, latex, latex is required for the bibliography to be compiled correctly
 report.pdf: report.tex
 	pdflatex report.tex
+	pdflatex report.tex
+	pdflatex report.tex
 
 # Remove the stuff that pdflatex created
 .PHONY: purge
