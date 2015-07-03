@@ -29,13 +29,32 @@ After $j$ bisections, there will be $2^j$ slices. So we wish to solve the follow
 where $N$ is the number of people, $j$ is the number of bisections and $k$ is the number of slices per person.
 
 \begin{lemma} \label{lem:1}
-Let $p$ be prime and $n \in \mathbb{Z}$.
+Let $p$ be prime and $q,n \in \mathbb{N}$.
 \begin{equation}
-  q | p^n \Rightarrow\quad \exists m \in \mathbb{Z}~\text{s.t}~q = p^m
+  q | p^n \Rightarrow\quad \exists m \in \mathbb{N}~\text{s.t}~q = p^m
 \end{equation}
 \end{lemma}
 
 \begin{proof}
+
+
+Let $p^n =c \cdot q$ for some $c \in \mathbb{N}$. By the fundamental theorem of arithmetic,
+\begin{equation}
+q=\prod_{i=1}^{s} p_i^{e_i}
+\end{equation}
+
+Assume $\exists i$ such that $p_i \ne p$ and seek a contradiction.
+
+WORK IN PROGRESS
+
+%% If $c=1$ then $q=p^n$ and we are done. So assume, without loss of generality, $c>1$.
+%% divides subset of prime factors
+
+%% By t
+
+%% Euclid's Lemma? c is either prime or not prime
+%% $c$ is either prime or not prime. If it is prime, it must equal $p$, as the only prime factors on the left side of the equation is $p$.
+%% Assume $\nexists m \in \mathbb{N}$ and seek a contradiction.
 \end{proof}
 
 \begin{theorem} \label{the:1}
