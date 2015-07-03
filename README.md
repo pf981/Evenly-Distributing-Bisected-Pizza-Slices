@@ -12,7 +12,7 @@ $ make
 ```
 pdflatex must be installed. Alternatively, run
 ```
-$ pdflatex report.tex
-$ pdflatex report.tex
-$ pdflatex report.tex
+$ pdflatex pizza_slices.tex
+$ pdflatex pizza_slices.tex
+$ pdflatex pizza_slices.tex
 ```

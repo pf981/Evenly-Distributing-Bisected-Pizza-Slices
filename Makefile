@@ -1,10 +1,10 @@
-all: report.pdf purge
+all: pizza_slices.pdf purge
 
 # This strange order of latex, bitex, latex, latex is required for the bibliography to be compiled correctly
-report.pdf: report.tex
-	pdflatex report.tex
-	pdflatex report.tex
-	pdflatex report.tex
+pizza_slices.pdf: pizza_slices.tex
+	pdflatex pizza_slices.tex
+	pdflatex pizza_slices.tex
+	pdflatex pizza_slices.tex
 
 # Remove the stuff that pdflatex created
 .PHONY: purge
@@ -13,7 +13,7 @@ purge:
 
 .PHONY: clean
 clean: purge
-	-rm report.pdf
+	-rm pizza_slices.pdf
 
 
 # General makefile notes:
