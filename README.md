@@ -7,4 +7,6 @@ When I was having dinner with some friends, the question came up as to how to di
 
 ## Compilation
 To compile, run
-    $ make
+```
+$ make
+```
