@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{cleveref}
 \usepackage[hypcap]{caption}
+\usepackage{mathtools}
 \title{Evenly Distributing Bisected Pizza Slices}
 \author{Paul Foster}
 \begin{document}
@@ -30,14 +31,14 @@ where $N$ is the number of people, $j$ is the number of bisections and $k$ is th
 \begin{lemma} \label{lem:1}
 Let $p$ be prime and $n \in \mathbb{Z}$.
 \begin{equation}
-  q | p^n \implies \exists m \in \mathbb{Z}~\text{s.t}~q = p^m
+  q | p^n \Rightarrow\quad \exists m \in \mathbb{Z}~\text{s.t}~q = p^m
 \end{equation}
 \end{lemma}
 
 \begin{proof}
 \end{proof}
 
-\begin{theorem}
+\begin{theorem} \label{the:1}
 $N$ has a solution to~\Cref{eq:1} iff $\exists l \in \mathbb{N}$ such that $N = 2^l$.
 \end{theorem}
 
@@ -52,6 +53,16 @@ If $N$ has a solution to~\Cref{eq:1}, $j$ is minimised when $j$ = $\log_2 N$
 \end{corollary}
 
 \begin{proof}
+From~\Cref{the:1} we have, $N=2^l$. In equation $kN=2^j$, j is clearly minimised when $k$ is minimised. That is, $k=1$. This implies
+\begin{equation}
+\begin{alignedat}{2}
+&& kN &= 2^l \\
+\Rightarrow\quad && N &= 2^{j_\text{min}} \\
+\Rightarrow\quad && j_\text{min} &= \log_2 N \\
+&& &= \log_2 2^l \\
+&& &= l \\
+\end{alignedat}
+\end{equation}
 \end{proof}
 
 \end{document}
