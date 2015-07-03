@@ -1,16 +1,31 @@
 \documentclass{article}
 \usepackage{amssymb}
-
+\usepackage{amsthm}
+\title{Evenly Distributing Bisected Pizza Slices}
+\author{Paul Foster}
 \begin{document}
+\maketitle
 
-\title{Proof}
-\author{Paul Foster
-\date{\@date}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
 
-%% \maketitle
-Placeholder
+\section{Introduction}
+N people are sitting at a table and wish to divide a pizza evenly amoungst themselves. The only way they can cut the pizza is to bisect every slice.
 
+\begin{theorem}
+Let $f$ be a function whose derivative exists in every point, then $f$
+is a continuous function.
+\end{theorem}
 
+\begin{lemma}
+Given two line segments whose lengths are $a$ and $b$ respectively there
+is a real number $r$ such that $b=ra$.
+\end{lemma}
 
+\begin{proof}
+To prove it by contradiction try and assume that the statemenet is false,
+proceed from there and at some point you will arrive to a contradiction.
+\end{proof}
 
 \end{document}
