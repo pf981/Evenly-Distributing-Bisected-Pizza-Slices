@@ -12,11 +12,17 @@
 
 \section{Introduction}
 $N$ people are sitting at a table and wish to divide a pizza evenly amoungst themselves. The only way they can cut the pizza is to bisect every slice. This raises several questions:
-
 \begin{enumerate}
   \item Given $N$ people, how would you determine if it is possible to bisect each slice such that an equal number of slices can be given to each person?
   \item How would you find the least number of bisections that are needed to give an equal number of slices to each person?
 \end{enumerate}
+
+\section{Analysis}
+After $j$ bisections, there will be $2^j$ slices. So we wish to solve the following: given $N \in \mathbb{N}$, find the smallest $j \in \mathbb{N}$ (if it exists) such that $\exists k \in \mathbb{N}$ such that
+\begin{equation}
+  kN = 2^j
+\end{equation}
+where $N$ is the number of people, $j$ is the number of bisections and $k$ is the number of slices per person.
 
 \begin{theorem}
 Let $f$ be a function whose derivative exists in every point, then $f$
