@@ -15,50 +15,26 @@
 \newtheorem{lemma}[theorem]{Lemma}
 
 \section{Introduction}
-$N>1$ people are sitting at a table and wish to divide a pizza evenly amoungst themselves. The only way they can cut the pizza is to bisect every slice. After $1$ cut, there are $2$ slices; after $2$ sets of cuts, there are $4$ slices etc. This raises several questions:
+$N$ people are sitting at a table and wish to divide a pizza evenly amoungst themselves. The only way they can cut the pizza is to bisect every slice. After $1$ cut, there are $2$ slices; after $2$ sets of cuts, there are $4$ slices etc. This raises several questions:
 \begin{enumerate}
   \item Given $N$ people, is it possible to divide the pizza such that an equal number of slices can be given to each person?
   \item What is the least number of sets of bisections that are needed to give an equal number of slices to each person?
 \end{enumerate}
 
 \section{Analysis}
-After $j$ bisections, there will be $2^j$ slices. So we wish to solve the following: given $N>1 \in \mathbb{N}$, find the smallest $j \in \mathbb{N}$ (if it exists) such that $\exists k \in \mathbb{N}$ such that
+After $j$ bisections, there will be $2^j$ slices. So we wish to solve the following: given $N \in \mathbb{N}$, find the smallest $j \in \mathbb{Z}_{>0}$ (if it exists) such that $\exists k \in \mathbb{N}$ such that
 \begin{equation} \label{eq:1}
   kN = 2^j
 \end{equation}
 where $N$ is the number of people, $j$ is the number of bisections and $k$ is the number of slices per person.
 
-\begin{lemma} \label{lem:1}
-Let $p$ be prime and $q,n \in \mathbb{N}$.
-\begin{equation}
-  q | p^n \Rightarrow\quad \exists m \in \mathbb{N}~\text{s.t}~q = p^m
-\end{equation}
+% https://proofwiki.org/wiki/Divisors_of_Power_of_Prime
+\begin{lemma}[Divisors of a Power of Prime] \label{lem:1}
+Let $p$ be prime and $n \in \mathbb{Z}_{>0}$ be a positive integer. Then the only divisors of $p^n$ are $1, p, p^2, ..., p^{n-1}, p^n$.
 \end{lemma}
 
 \begin{proof}
-\begin{equation} \label{eq:fund}
-& q | p^n \\
-\Rightarrow\quad & p^n =c \cdot q
-\end{equation}
-for some $c \in \mathbb{N}$. By the fundamental theorem of arithmetic,
-\begin{equation}
-q=\prod_{i=1}^{s} p_i^{e_i} \\
-\text{and} \\
-p=\prod_{i=1}^{s} p_i^{e_i} \\
-\end{equation}
-
-Assume $\exists i$ such that $p_i \ne p$ and seek a contradiction. As
-
-WORK IN PROGRESS
-
-%% If $c=1$ then $q=p^n$ and we are done. So assume, without loss of generality, $c>1$.
-%% divides subset of prime factors
-
-%% By t
-
-%% Euclid's Lemma? c is either prime or not prime
-%% $c$ is either prime or not prime. If it is prime, it must equal $p$, as the only prime factors on the left side of the equation is $p$.
-%% Assume $\nexists m \in \mathbb{N}$ and seek a contradiction.
+%% TODO:
 \end{proof}
 
 \begin{theorem} \label{the:1}
@@ -66,7 +42,7 @@ $N$ has a solution to~\Cref{eq:1} iff $\exists l \in \mathbb{N}$ such that $N = 
 \end{theorem}
 
 \begin{proof}
-For the forward direction, assume $kN=2^j$. As $2$ is prime and $N$ divides $2^j$, ~\Cref{lem:1} implies $N=2^l$.
+For the forward direction, assume $kN=2^j$. As $2$ is prime and $N$ is a divisor of $2^j$, ~\Cref{lem:1} implies $N=2^l$ for some $l \in \mathbb{N}$.
 
 For the reverse direction, assume $N=2^l$. Choose $k=1$ and $j=l$ and we have $kN=2^j$.
 \end{proof}
